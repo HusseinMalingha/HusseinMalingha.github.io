@@ -1,13 +1,119 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="description" content="Best Web services provider">
+    <meta name="theme-color">
+    <title>Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" type="text/css"> -->
+    <style>
+        header {
+            background-color: rgb(25, 120, 197);
+            color: black;
+        }
+        
+        li a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        a:hover {
+            color: red;
+        }
+        
+        footer {
+            background-color: rgb(168, 194, 214);
+            color: black;
+        }
+    </style>
 </head>
+
 <body>
-    {% block content  %}
-    {% endblock content %}
+    <header class="container-fluid header mb-5 sticky-top">
+        <div class="navbar navbar-light colord">
+            <div class="navbar-brand">
+                <a class="nav nav-link" href="{% url 'home' %}"><img src="{% static '/img/eaml-logo-black.png' %}" alt="Name"></a>
+            </div>
+
+            <nav class="nav nav-nav">
+                <ul class="nav nav-nav">
+                    <li class='nav-item'>
+                        <a class="nav-link active" href="{% url 'home' %}"><i class="fa fa-home"></i>Home</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="http://"><i class="fa fa-blog"></i>Blog</a>
+                    </li>
+                    <!-- <li class='nav-item'>
+                        <a class="nav-link" href="http://"><i class="fa fa-faq"></i>FAQs</a>
+                    </li> -->
+                </ul>
+                <div class="nav-item">
+                    <a href="{% url 'quote-create' %}" class="nav-link btn btn-danger">Get Quote</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        {% block content %}{% endblock content %}
+    </main>
+
+    <footer class="p-3 mt-5">
+        <div class="row">
+            <div class="col-md-4 ml-5 navbar navbar-light">
+                <div class="navbar-brand navbar-text">
+                    <h2>
+                        <a href="{% url 'home' %}"><img src="{% static '/img/eaml-logo-white.png' %}" alt="Name"></a>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="navbar-text">
+                    <h3>Services</h3>
+                </div>
+                <nav class="navbar nav-nav">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a href="#">Website Development</a></li>
+                        <li class="nav-item"><a href="#">Digital Marketing</a></li>
+                        <li class="nav-item"><a href="#">Systems Development</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-3">
+                <div class="navbar-text">
+                    <h3>Contacts</h3>
+                </div>
+                <nav class="navbar nav-nav">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a href="mailto:info@mail.com">info@mail.com</a></li>
+                        <li class="nav-item">
+                            <a href="tel:+5554554901">(555) 455 4901</a>
+                        </li>
+                        <li class="nav-item">
+                            <address class="address">
+                                P. O. Box 123,<br>
+                                Kampala, Uganda
+                            </address>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="flex justify-content-center">
+            <p>&copy;2021 Name</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <!-- <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/jquery.min.js' %}"></script> -->
+    <!-- <script src="{% static '/js/popper.min.js' %}"></script> -->
 </body>
+
 </html>
