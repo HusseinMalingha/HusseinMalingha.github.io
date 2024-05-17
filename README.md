@@ -15,3 +15,13 @@
 ## Socials
 
 [TWITTER](https:x.com/hm_osep)
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DPTKZ9TES2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DPTKZ9TES2');
+</script>
