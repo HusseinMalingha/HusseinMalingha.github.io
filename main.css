@@ -39,7 +39,7 @@ article {
 
 a {
     color: var(--primary-color);
-    
+
     :visited {
         color: inherit;
     }
@@ -170,7 +170,7 @@ footer p {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items:flex-start;
+        align-items: flex-start;
     }
     .myName { font-size: 3rem;}
     .myTitle {
@@ -190,8 +190,7 @@ footer p {
         height: 250px;
     }
     main {
-        margin-right: 25px;
-        margin-left: 25px;
+        margin: 25px;
         padding: 0;
     }
 }
