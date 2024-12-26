@@ -6,29 +6,41 @@
     --text-color: #0c1334;
 }
 
-body, ::after, ::before {
+body,
+::after,
+::before {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: Montserrat, Arial san-serif;
     font-weight: 800;
     color: var(--text-color);
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
     font-size: 1.4rem;
     color: var(--text-color);
 }
 
-p, article {
+p,
+article {
     font-family: Literata, Gamarond, serif;
 }
 
 .btn {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-weight: 700;
-    padding:  5px 10px;
+    padding: 5px 10px;
     text-decoration: none;
     background-color: var(--primary-color);
     color: #fff;
@@ -41,25 +53,39 @@ p, article {
 }
 
 .blog:hover {
-    background-color: #fff;
+    background-color: #b8dbf9;
     color: var(--primary-color);
+    border: solid 2px;
 }
 
 .cta {
     background-color: #fff;
     color: var(--primary-color);
     font-size: 1.5rem;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 5px 10px;
     box-shadow: -5px -5px var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta:hover {
+    transform: translate(-5px, -5px); /* Move the button into the shadow position */
+    background-color: var(--primary-color); /* Match the shadow color */
+    color: #fff; /* Invert text color for better contrast */
+    box-shadow: none; /* Remove the shadow to create the effect */
 }
 
 header {
     top: 0;
     position: relative;
     width: 100%;
-    height: 700px;
+    height: 100vh;
     padding-top: 20px;
+    background: url("mesh-gradient.png") no-repeat left top scroll;
+    background-size: cover;
+    background-color: #3366cc;
+    box-shadow: 2px 2px 5px var(--secondary-color);
 }
 
 header nav {
@@ -88,31 +114,16 @@ header nav {
     color: var(--primary-color);
     font-size: 3.5rem;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 
 .myTitle {
     font-family: Literata, serif;
     font-size: 3rem;
     margin-top: 0;
-    margin-bottom: 0;
-}
-
-.hero ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hero ul li {
-    list-style: none;
-    margin-right: 10px;
-    padding: 5px;
+    margin-bottom: 25px;
     text-transform: capitalize;
-    border-bottom: var(--primary-color) solid 2px;
-    cursor: pointer;
-    font-size: 1.2rem;
+    transition: opacity 0.5s ease-in-out;
 }
 
 main {
@@ -121,7 +132,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
 h3 {
@@ -129,4 +140,27 @@ h3 {
     border-bottom: var(--primary-color) solid 2px;
     text-transform: capitalize;
 }
-  
+
+@media only screen and (max-width: 450px) {
+    h1, h2 {
+        font-size: .70rem;
+    }
+
+    header nav {
+        width: 80%;
+        height: .9rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero {
+        margin: 0 50px;
+    }
+    .logo {
+        height: 150px;
+    }
+    .main {
+        width: 80vw;
+        margin: 0 10px;
+        padding: 0;
+    }
+}
