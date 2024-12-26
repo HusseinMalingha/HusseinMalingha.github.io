@@ -37,6 +37,14 @@ article {
     font-family: Literata, Gamarond, serif;
 }
 
+a {
+    color: var(--primary-color);
+    
+    :visited {
+        color: inherit;
+    }
+}
+
 .btn {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-weight: 700;
@@ -139,6 +147,11 @@ h3 {
     width: 100%;
     border-bottom: var(--primary-color) solid 2px;
     text-transform: capitalize;
+}
+
+footer p {
+    font-size: .75rem;
+    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
